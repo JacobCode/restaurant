@@ -1,0 +1,99 @@
+@import './variables';
+
+#about {
+    background: #FCF8F4;
+    .main-image {
+        height: 60vh;
+        background-image: url('https://getbento.imgix.net/aNPt31LnSHGBSmVOVEdO_Image 1.jpg?fit=max&w=1800&auto=format,compress');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: -250px;
+    }
+    .summary {
+        padding: 4rem 1rem;
+        text-align: center;
+        background: #FCF8F4;
+        .content {
+            max-width: 850px;
+            margin: 0 auto;
+            h1 {
+                font-family: $display;
+                border-bottom: 2px solid #e7e7e7;
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                color: $darkGrey;
+            }
+            p {
+                font-family: $default;
+                color: $darkGrey;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .more-info {
+        background: white;
+        padding: 4rem 0; 
+        .row {
+            height: 400px;
+            display: flex;
+            max-width: 1000px;
+            align-items: center;
+            margin: 0 auto;
+            &:first-of-type {
+                margin-bottom: 4rem;
+            }
+            &.row-reverse {
+                flex-direction: row-reverse;
+                .box {
+                    .text {
+                        left: -40%;
+                    }
+                }
+            }
+            .box {
+                width: 50%;
+                display: flex;
+                // justify-content: center;
+                .text {
+                    width: 300px;
+                    background: white;
+                    position: relative;
+                    top: 0;
+                    left: 60%;
+                    padding: 1rem;
+                    -webkit-box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.16);
+                    -moz-box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.16);
+                    box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.16);
+                    h2 {
+                        margin-bottom: 1rem;
+                        font-family: $display;
+                        color: $red;
+                    }
+                    p {
+                        font-family: $default;
+                        line-height: 1.6;
+                        color: $darkGrey;
+                    }
+                }
+            }
+            .image {
+                height: 100%;
+                width: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                &.image1 {
+                    background-image: url('https://getbento.imgix.net/accounts/c7b49cc88d1bb3823c4129b95e9fcb71/media/images/48214Our_food.jpg?fit=max&w=1800&auto=format,compress');
+                }
+                &.image2 {
+                    background-image: url('https://getbento.imgix.net/7nFbBYhjROGNnvMeHmPZ_Image 5.jpg?fit=max&w=1800&auto=format,compress');
+                }
+            }
+        }
+    }
+}

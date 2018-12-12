@@ -1,0 +1,12 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-container {
+    // padding: 1rem;
+    background: $lightGrey;
+    min-height: 90vh;
+}

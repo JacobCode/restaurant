@@ -1,0 +1,27 @@
+@import 'variables';
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    .links {
+        display: flex;
+        align-items: center;
+        a {
+            text-decoration: none;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+            color: $inactiveLink;
+            &.active {
+                color: $red;
+            }
+        }
+    }
+    .logo {
+        background: $red;
+        height: 50px;
+        width: 50px;
+    }
+}
