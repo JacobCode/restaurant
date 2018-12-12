@@ -1,0 +1,50 @@
+@import './variables';
+
+.reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 4rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    .review {
+        border: 2px solid $darkGrey;
+        padding: 1rem;
+        .border {
+            color: $darkGrey;
+            .top-comma {
+                font-size: 2rem;
+                font-family: $display;
+                text-align: left;
+                span {
+                    text-align: left;
+                }
+            }
+            p {
+                font-family: $default;
+                font-size: 1.1rem;
+                margin-top: -1rem;
+                line-height: 1.5;
+            }
+            .bottom-comma {
+                font-size: 2rem;
+                font-family: $display;
+                text-align: right;
+                span {
+                    text-align: right;
+                }
+            }
+        }
+        .stars {
+            margin-top: -0.5rem;
+            i {
+                font-size: 0.8rem;
+                margin-right: 0.25rem;
+                color: $blue;
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

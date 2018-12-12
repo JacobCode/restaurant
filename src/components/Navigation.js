@@ -14,7 +14,7 @@ const Navigation = () => {
                 <NavLink to="/blog" exact>Blog</NavLink>
             </div>
             <div className="logo">
-                
+                <p>Bello Italiano <i className="fas fa-glass-cheers"></i></p>
             </div>
         </div>
     )

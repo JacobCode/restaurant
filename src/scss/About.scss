@@ -13,13 +13,13 @@
     .summary {
         padding: 4rem 1rem;
         text-align: center;
-        background: #FCF8F4;
+        background: $tan;
         .content {
             max-width: 850px;
             margin: 0 auto;
             h1 {
                 font-family: $display;
-                border-bottom: 2px solid #e7e7e7;
+                border-bottom: 1px solid $darkGrey;
                 margin-bottom: 1rem;
                 padding-bottom: 1rem;
                 color: $darkGrey;
@@ -29,6 +29,7 @@
                 color: $darkGrey;
                 margin-bottom: 1rem;
                 line-height: 1.6;
+                font-weight: 300;
                 &:last-of-type {
                     margin: 0;
                 }
@@ -37,47 +38,48 @@
     }
     .more-info {
         background: white;
-        padding: 4rem 0; 
+        padding: 8rem 0; 
         .row {
             height: 400px;
             display: flex;
             max-width: 1000px;
             align-items: center;
+            justify-content: center;
             margin: 0 auto;
             &:first-of-type {
-                margin-bottom: 4rem;
+                margin-bottom: 8rem;
             }
             &.row-reverse {
                 flex-direction: row-reverse;
                 .box {
                     .text {
-                        left: -40%;
+                        left: -20%;
                     }
                 }
             }
             .box {
                 width: 50%;
                 display: flex;
-                // justify-content: center;
                 .text {
                     width: 300px;
-                    background: white;
+                    background: $blue;
                     position: relative;
                     top: 0;
                     left: 60%;
                     padding: 1rem;
-                    -webkit-box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.16);
-                    -moz-box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.16);
-                    box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.16);
+                    -webkit-box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.1);
+                    -moz-box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.1);
+                    box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.1);
                     h2 {
                         margin-bottom: 1rem;
                         font-family: $display;
-                        color: $red;
+                        color: $lightBlue;
                     }
                     p {
                         font-family: $default;
                         line-height: 1.6;
-                        color: $darkGrey;
+                        color: white;
+                        font-weight: 300;
                     }
                 }
             }

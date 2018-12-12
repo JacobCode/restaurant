@@ -4,24 +4,53 @@
     display: flex;
     justify-content: space-between;
     background: white;
+    flex-direction: row-reverse;
     .links {
         display: flex;
         align-items: center;
+        padding: 0 1rem;
         a {
             text-decoration: none;
-            height: 2rem;
+            height: 100%;
             display: flex;
             align-items: center;
-            margin: 0 1rem;
+            margin: 0 0.5rem;
             color: $inactiveLink;
+            font-family: $default;
+            padding: 0 0.5rem;
+            transition: all 0.4s ease-in-out;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
             &.active {
-                color: $red;
+                color: $blue;
+                border-bottom: 2px solid $blue;
+            }
+            &:first-of-type {
+                margin-left: 0;
+            }
+            &:last-of-type {
+                margin-right: 0;
             }
         }
     }
     .logo {
-        background: $red;
         height: 50px;
-        width: 50px;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        p {
+            display: flex;
+            align-items: center;
+            font-family: $display;
+            color: $blue;
+            font-size: 1.4rem;
+        }
+        i {
+            font-size: 1.6rem;
+            color: $blue;
+            margin-left: 1rem;
+        }
     }
 }

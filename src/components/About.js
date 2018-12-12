@@ -21,7 +21,7 @@ const About = () => {
                     </p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi quas, ullam consequatur placeat dolorem unde, 
                     quae nobis enim dolores repellendus quo? Dolore laudantium ab nisi impedit cumque maiores aperiam pariatur. Earum 
-                    alias vero sapiente facere eum. Consequuntur, facere.
+                    alias vero sapiente facere eum. Consequuntur, facere eum. Consequuntur, facere.
                     </p>
                 </div>
             </div>

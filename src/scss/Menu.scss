@@ -1,0 +1,81 @@
+@import './variables';
+
+.menu {
+    background: $darkGrey;
+    padding-bottom: 4rem;
+    .title {
+        width: 100px;
+        margin: 0 auto 4rem;
+        .vertical_line {
+            height: 50px;
+            width: 2px;
+            background: white;
+            margin: 0 auto 1rem;
+        }
+        h1 {
+            color: white;
+            font-family: $default;
+            font-weight: 300;
+            text-align: center;
+            font-size: 2.3rem;
+        }
+    }
+    .menu-categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+        .category {
+            padding: 1rem;
+            color: white;
+            h3 {
+                font-family: $display;
+                margin-bottom: 1rem;
+                font-size: 1.6rem;
+                color: $lightBlue;
+                display: flex;
+                align-items: center;
+                i {
+                    margin-left: 1rem;
+                    font-size: 1.3rem;
+                }
+            }
+            .category-items {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 2rem;
+                grid-row-gap: 1rem;
+                .item {
+                    font-family: $default;
+                    p {
+                        margin-bottom: 0.5rem;
+                        font-size: 1.3rem;
+                    }
+                    span {
+                        color: $lightGrey;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    .download-menu {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            text-decoration: none;
+            border: 2px solid $lightBlue;
+            color: $lightBlue;
+            padding: 1rem;
+            transition: all 0.4s ease-in-out;
+            letter-spacing: 1px;
+            &:hover {
+                background: $lightBlue;
+                color: $darkGrey;
+            }
+        }
+    }
+}
