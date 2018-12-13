@@ -8,6 +8,7 @@ import About from './components/About';
 import Reservations from './components/Reservations';
 import Blog from './components/Blog';
 import Error from './components/Error';
+import Footer from './components/Footer';
 
 // SCSS
 import './scss/main.scss';
@@ -25,6 +26,7 @@ class App extends Component {
             <Route path="/blog" component={Blog} />
             <Route component={Error} />
           </Switch>
+          <Footer />
         </div>
       </BrowserRouter>
     );

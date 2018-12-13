@@ -8,16 +8,18 @@
         margin: 0 auto 4rem;
         .vertical_line {
             height: 50px;
-            width: 2px;
-            background: white;
+            width: 1px;
+            background: $lightGrey;
             margin: 0 auto 1rem;
+            opacity: 0.2;
         }
         h1 {
-            color: white;
+            color: $lightGrey;
             font-family: $default;
             font-weight: 300;
             text-align: center;
             font-size: 2.3rem;
+            letter-spacing: 1px;
         }
     }
     .menu-categories {
@@ -28,17 +30,22 @@
         margin: 0 auto;
         .category {
             padding: 1rem;
-            color: white;
             h3 {
                 font-family: $display;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
                 font-size: 1.6rem;
-                color: $lightBlue;
+                color: $lightGrey;
                 display: flex;
                 align-items: center;
-                i {
+                text-transform: capitalize;
+                font-weight: 400;
+                div {
+                    height: 1px;
+                    width: 50px;
+                    background: $lightGrey;
                     margin-left: 1rem;
-                    font-size: 1.3rem;
+                    opacity: 0.2;
+                    width: 100%;
                 }
             }
             .category-items {
@@ -51,10 +58,15 @@
                     p {
                         margin-bottom: 0.5rem;
                         font-size: 1.3rem;
+                        color: $lightGrey;
+                        text-transform: capitalize;
                     }
                     span {
                         color: $lightGrey;
                         font-weight: 300;
+                        color: #969696;
+                        font-size: 0.9rem;
+                        text-transform: lowercase;
                     }
                 }
             }
@@ -67,13 +79,14 @@
         justify-content: center;
         a {
             text-decoration: none;
-            border: 2px solid $lightBlue;
-            color: $lightBlue;
-            padding: 1rem;
+            border: 2px solid #3f3f3f;
+            color: #3f3f3f;
+            padding: 0.5rem 1rem;
             transition: all 0.4s ease-in-out;
             letter-spacing: 1px;
+            border-radius: 2rem;
             &:hover {
-                background: $lightBlue;
+                background: #3f3f3f;
                 color: $darkGrey;
             }
         }

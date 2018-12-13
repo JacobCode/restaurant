@@ -1,6 +1,7 @@
 import React from 'react';
 
 // Components
+import Carousel from './Carousel';
 import Menu from './Menu';
 import Reviews from './Reviews';
 
@@ -9,7 +10,7 @@ import Reviews from './Reviews';
 const Home = () => {
     return (
         <div id="home" className="main-container">
-            {/* <h1>Home</h1> */}
+            <Carousel />
             <Menu />
             <Reviews />
         </div>

@@ -13,20 +13,21 @@
     .summary {
         padding: 4rem 1rem;
         text-align: center;
-        background: $tan;
+        background: $darkGrey;
         .content {
             max-width: 850px;
             margin: 0 auto;
             h1 {
                 font-family: $display;
-                border-bottom: 1px solid $darkGrey;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
                 margin-bottom: 1rem;
                 padding-bottom: 1rem;
-                color: $darkGrey;
+                color: $lightGrey;
+                font-weight: 400;
             }
             p {
                 font-family: $default;
-                color: $darkGrey;
+                color: #969696;
                 margin-bottom: 1rem;
                 line-height: 1.6;
                 font-weight: 300;
@@ -42,7 +43,7 @@
         .row {
             height: 400px;
             display: flex;
-            max-width: 1000px;
+            max-width: 900px;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
@@ -53,7 +54,7 @@
                 flex-direction: row-reverse;
                 .box {
                     .text {
-                        left: -20%;
+                        left: -40%;
                     }
                 }
             }
@@ -62,7 +63,7 @@
                 display: flex;
                 .text {
                     width: 300px;
-                    background: $blue;
+                    background: #ffffffda;
                     position: relative;
                     top: 0;
                     left: 60%;
@@ -73,12 +74,12 @@
                     h2 {
                         margin-bottom: 1rem;
                         font-family: $display;
-                        color: $lightBlue;
+                        color: $red;
                     }
                     p {
                         font-family: $default;
                         line-height: 1.6;
-                        color: white;
+                        color: $darkGrey;
                         font-weight: 300;
                     }
                 }
