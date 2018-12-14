@@ -221,18 +221,25 @@
 
 @media screen and (max-width: 480px) {
     #reservations {
-        h1 {}
+        h1 {
+            padding: 0 1rem;
+        }
 
         form {
+            padding: 1rem;
             .info {
                 div {
                     input {}
 
                     select {}
+                    &:last-of-type {
+                        margin-bottom: 1rem;
+                    }
                 }
             }
 
             .submit {
+                justify-content: initial;
                 button {}
             }
         }

@@ -105,13 +105,16 @@
 
 @media screen and (max-width: 480px) {
     .carousel {
+        padding: 3rem 1rem;
         .title {
+            margin-bottom: 3rem;
             div {}
 
             h1 {}
         }
 
         .images-container {
+            margin-bottom: 3rem;
             .current-image {}
         }
 

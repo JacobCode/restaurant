@@ -35,8 +35,8 @@
                     color: $darkGrey;
                     font-size: 1.1rem;
                     padding: 0.5rem 1rem;
-                    border-top-left-radius: 1.5rem;
-                    border-bottom-right-radius: 1.5rem;
+                    border-top-right-radius: 1.5rem;
+                    border-bottom-left-radius: 1.5rem;
                     font-family: $default;
                     letter-spacing: 1px;
                     transition: all 0.4s ease-in-out;
@@ -46,6 +46,10 @@
                         background: $darkGrey;
                         color: $lightGrey;
                         border-color: transparent;
+                        border-top-right-radius: 0;
+                        border-bottom-left-radius: 0;
+                        border-top-left-radius: 1.5rem;
+                        border-bottom-right-radius: 1.5rem;
                     }
                 }
             }
@@ -113,7 +117,7 @@
                 width: 50%;
                 display: flex;
                 .text {
-                    width: 300px;
+                    width: 100%;
                     background: #ffffffda;
                     position: relative;
                     top: 0;
@@ -146,6 +150,9 @@
                 }
                 &.image2 {
                     background-image: url('https://getbento.imgix.net/7nFbBYhjROGNnvMeHmPZ_Image 5.jpg?fit=max&w=1800&auto=format,compress');
+                }
+                &.image3 {
+                    // background-image: url('')
                 }
             }
         }
@@ -271,10 +278,20 @@
             .row {
                 &:first-of-type {}
 
-                &.row-reverse {}
+                &.row-reverse {
+                    flex-direction: row-reverse;
 
+                    .box {
+                        .text {
+                            left: -40%;
+                        }
+                    }
+                }
                 .box {
+                    width: 60%;
                     .text {
+                        width: 400px !important;
+                        left: 20%;
                         h2 {}
 
                         p {}
@@ -282,7 +299,7 @@
                 }
 
                 .image {
-
+                    width: 40%;
                 }
             }
         }

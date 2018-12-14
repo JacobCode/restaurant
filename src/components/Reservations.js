@@ -13,10 +13,10 @@ class Reservations extends Component {
             currentDate: '',
             chosenDate: '',
             chosenTime: '',
-            chosenParty: 'sm',
+            chosenParty: '',
             userName: '',
             userEmail: '',
-            userPhone: 0
+            userPhone: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -40,12 +40,20 @@ class Reservations extends Component {
         var userName = e.target.elements[3].value;
         var userEmail = e.target.elements[4].value;
         var userPhone = e.target.elements[5].value;
-        console.log(chosenDate);
-        console.log(chosenTime);
-        console.log(chosenParty);
-        console.log(userName);
-        console.log(userEmail);
-        console.log(userPhone);
+        // console.log(chosenDate);
+        // console.log(chosenTime);
+        // console.log(chosenParty);
+        // console.log(userName);
+        // console.log(userEmail);
+        // console.log(userPhone);
+        this.setState({
+            chosenDate: chosenDate,
+            chosenTime: chosenTime,
+            chosenParty: chosenParty,
+            userName: userName,
+            userEmail: userEmail,
+            userPhone: userPhone
+        })
     }
 
     componentWillMount() {
