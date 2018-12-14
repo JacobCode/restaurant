@@ -4,12 +4,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
-    padding: 6rem 0;
+    padding: 6rem 2rem;
     max-width: 1100px;
     margin: 0 auto;
+    grid-auto-flow: column;
     .review {
-        border: 2px solid $darkGrey;
+        border: 1px solid $darkGrey;
         padding: 1rem;
+        min-width: 250px;
         .border {
             color: $darkGrey;
             .top-comma {
@@ -40,11 +42,72 @@
             i {
                 font-size: 0.8rem;
                 margin-right: 0.25rem;
-                color: $red;
+                color: $purple;
                 &:last-of-type {
                     margin: 0;
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .reviews {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: column;
+        .review {
+            &:last-of-type {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+            }
+            .border {
+                .top-comma {
+                    span {
+
+                    }
+                }
+                p {
+
+                }
+                .bottom-comma {
+                    span {
+
+                    }
+                }
+            }
+            .start {
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reviews {
+        grid-template-columns: 1fr;
+        .review {
+            grid-column: 1 / 2;
+            max-width: 300px;
+            margin: 0 auto;
+            .border {
+                .top-comma {
+                    span {}
+                }
+
+                p {}
+
+                .bottom-comma {
+                    span {}
+                }
+            }
+
+            .start {}
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .reviews {
+        padding: 4rem 1rem;
     }
 }

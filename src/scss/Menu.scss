@@ -92,3 +92,105 @@
         }
     }
 }
+
+@media screen and (max-width: 992px) {
+    .menu {
+        .title {
+            .vertical_line {
+
+            }
+            h1 {
+
+            }
+        }
+        .menu-categories {
+            .category {
+                h3 {
+                    div {
+
+                    }
+                }
+                .category-items {
+                    .item {
+                        p {
+
+                        }
+                        span {
+
+                        }
+                    }
+                }
+            }
+        }
+        .download-menu {
+            a {
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        .title {
+            .vertical_line {}
+
+            h1 {}
+        }
+
+        .menu-categories {
+            grid-template-columns: 1fr;
+            padding: 0 2rem;
+            .category {
+                h3 {
+                    div {}
+                }
+
+                .category-items {
+                    .item {
+                        p {}
+
+                        span {}
+                    }
+                }
+            }
+        }
+
+        .download-menu {
+            a {}
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        .title {
+            .vertical_line {}
+
+            h1 {}
+        }
+
+        .menu-categories {
+            padding: 0 1rem;
+            .category {
+                padding: 0;
+                h3 {
+                    div {}
+                }
+
+                .category-items {
+                    grid-template-columns: 1fr;
+                    .item {
+                        p {}
+
+                        span {}
+                    }
+                }
+            }
+        }
+
+        .download-menu {
+            a {}
+        }
+    }
+}

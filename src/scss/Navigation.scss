@@ -24,8 +24,8 @@
             letter-spacing: 1px;
             font-size: 1.1rem;
             &.active {
-                color: $red;
-                border-bottom: 1px solid $red;
+                color: $purple;
+                border-bottom: 1px solid $purple;
             }
             &:first-of-type {
                 margin-left: 0;
@@ -40,7 +40,7 @@
         display: flex;
         align-items: center;
         padding: 1rem;
-        color: $red;
+        color: $purple;
         p {
             display: flex;
             align-items: center;
@@ -50,6 +50,49 @@
         i {
             font-size: 1.3rem;
             margin-left: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navigation {
+        .links {
+            a {
+
+            }
+        }
+        .logo {
+
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        .links {
+            a {}
+        }
+
+        .logo {}
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navigation {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        .links {
+            a {
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        .logo {
+            margin: 0.5rem 0;
+            p {
+                font-size: 2rem;
+            }
         }
     }
 }

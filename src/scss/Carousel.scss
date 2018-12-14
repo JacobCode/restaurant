@@ -46,16 +46,77 @@
         margin: 0 auto;
         button {
             width: 40%;
-            background: $red;
+            background: $purple;
             border: none;
             padding: 0.5rem 0;
             color: white;
+            cursor: pointer;
             &:focus {
                 outline: none;
             }
             &:disabled {
-                background: #aa33337a;
+                background: #37206ead;
+                cursor: not-allowed;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .carousel {
+        .title {
+            div {
+
+            }
+            h1 {
+
+            }
+        }
+        .images-container {
+            .current-image {
+
+            }
+        }
+        .controller {
+            button {
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        .title {
+            div {}
+
+            h1 {}
+        }
+
+        .images-container {
+            .current-image {}
+        }
+
+        .controller {
+            button {}
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel {
+        .title {
+            div {}
+
+            h1 {}
+        }
+
+        .images-container {
+            .current-image {}
+        }
+
+        .controller {
+            button {}
         }
     }
 }

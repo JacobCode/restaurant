@@ -1,5 +1,240 @@
 @import './variables';
 
 #reservations {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    flex-direction: column;
+    h1 {
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 4rem;
+        font-family: $display;
+        font-weight: 300;
+        font-size: 2.3rem;
+    }
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        width: 100%;
+        max-width: 800px;
+        .info {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 2fr;
+            div {
+                margin-bottom: 2rem;
+                min-height: 40px;
+                max-height: 40px;
+                display: flex;
+                &:last-of-type {
+                    margin: 0;
+                }
+                input {
+                    background: none;
+                    border: none;
+                    color: $darkGrey;
+                    font-size: 1rem;
+                    border-bottom: 1px solid #24242427;
+                    padding: 0 0 0.5rem 0;
+                    width: 100%;
+                    font-family: $default;
+                    border-radius: 0;
+                    transition: all 0.4s ease-in-out;
+                    &::placeholder {
+                        color: #969696;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        border-color: $darkGrey;
+                    }
+                }
+
+                select {
+                    height: 40px;
+                    border: none;
+                    border: 1px solid #24242427;
+                    background: none;
+                    color: #242424;
+                    border-radius: 0;
+                    font-family: $default;
+                    -webkit-appearance: none;
+                    padding: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1rem;
+                    transition: all 0.4s ease-in-out;
+                    &:focus {
+                        outline: none;
+                        border-color: #242424;
+                    }
+                    option {
+                        // font-size: 1rem;
+                    }
+                }
+
+                input[type="date"] {
+                    font-family: $default;
+                    text-transform: uppercase;
+                    &::-webkit-datetime-edit {
+                        
+                    }
+
+                    &::-webkit-datetime-edit-fields-wrapper {
+
+                    }
+
+                    &::-webkit-datetime-edit-text {
+                        
+                    }
+
+                    &::-webkit-datetime-edit-month-field {
+                        &:focus {
+                            background: $purple;
+                            color: $lightGrey;
+                        }
+                    }
+
+                    &::-webkit-datetime-edit-day-field {
+                        &:focus {
+                            background: $purple;
+                            color: $lightGrey;
+                        }
+                    }
+
+                    &::-webkit-datetime-edit-year-field {
+                        &:focus {
+                            background: $purple;
+                            color: $lightGrey;
+                        }
+                    }
+
+                    &::-webkit-inner-spin-button {
+                        
+                    }
+
+                    &::-webkit-calendar-picker-indicator {
+                        opacity: 1;
+                        transform: rotate(180deg);
+                        transition: all 0.5s ease-in-out;
+                        padding: 0.5rem;
+                        cursor: pointer;
+                        background: $lightGrey !important;
+                    }
+                    &:focus {
+                        &::-webkit-calendar-picker-indicator {
+                            transform: initial;
+                        }
+                    }
+                }
+            }
+        }
+        .submit {
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                background: $purple;
+                width: 200px;
+                font-size: 1.2rem;
+                font-family: $display;
+                border: none;
+                padding: 0.5rem;
+                cursor: pointer;
+                transition: all 0.4s ease-in-out;
+                color: $lightGrey;
+                &:focus {
+                    outline-color: $purple;
+                }
+                &:hover {
+                    -webkit-box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.5);
+                    -moz-box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.5);
+                    box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.5);
+                }
+            }
+        }
+    }
+}
+
+.booked {
+    min-height: 80vh;
+    background: blue;
+}
+
+@media screen and (max-width: 992px) {
+    #reservations {
+        h1 {
+            padding: 0 2rem;
+        }
+        form {
+            background: rgb(207, 129, 57);
+            padding: 0 2rem;
+            .info {
+                div {
+                    input {}
+
+                    select {}
+                }
+            }
+            .submit {
+                button {
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #reservations {
+        padding: 2rem 0;
+        h1 {
+            margin-bottom: 2rem;
+        }
+        form {
+            justify-content: center;
+            grid-template-columns: 1fr;
+            grid-auto-flow: column;
+            grid-gap: 0;
+            background: none;
+            .info {
+                margin-bottom: 2rem;
+                div {
+                    input {}
+
+                    select {}
+                }
+            }
+
+            .submit {
+                button {}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #reservations {
+        h1 {}
+
+        form {
+            .info {
+                div {
+                    input {}
+
+                    select {}
+                }
+            }
+
+            .submit {
+                button {}
+            }
+        }
+    }
 }

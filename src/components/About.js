@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 // SCSS
 import '../scss/About.scss';
@@ -6,8 +7,18 @@ import '../scss/About.scss';
 const About = () => {
     return (
         <div id="about" className="main-container">
-            <div className="main-image">
-
+            <div className="main-content">
+                <div className="main-text">
+                    <div className="text">
+                        <h1>Reserve a table today</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi quas, ullam consequatur placeat dolorem unde, 
+                        quae nobis enim dolores</p>
+                        <NavLink to="/reservations" exact>Book Now</NavLink>
+                    </div>
+                </div>
+                <div className="main-image">
+                    
+                </div>
             </div>
             <div className="summary">
                 <div className="content">
@@ -30,7 +41,7 @@ const About = () => {
                     <div className="box">
                         <div className="text">
                             <h2>Our Staff</h2>
-                            <p>ilili is a place for family, the one you’re born into and the one you create around food, love and friendship. 
+                            <p>Bello is a place for family, the one you’re born into and the one you create around food, love and friendship. 
                             Our attentive staff ensures that your entire dining experience with us is stellar from beginning to end.
                             </p>
                         </div>
@@ -43,12 +54,25 @@ const About = () => {
                     <div className="box">
                         <div className="text">
                             <h2>Our Food</h2>
-                            <p>Every dish at ilili has it's own story from the traditional recipes direct from Lebanon, to modern updates 
+                            <p>Every dish at Bello has it's own story from the traditional recipes direct from Lebanon, to modern updates 
                             that tell the history of our team, of our cooks and chefs who have left their mark on our kitchen. 
                             </p>
                         </div>
                     </div>
                     <div className="image image2">
+
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="box">
+                        <div className="text">
+                            <h2>Our Staff</h2>
+                            <p>Bello is a place for family, the one you’re born into and the one you create around food, love and friendship. 
+                            Our attentive staff ensures that your entire dining experience with us is stellar from beginning to end.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="image image1">
 
                     </div>
                 </div>

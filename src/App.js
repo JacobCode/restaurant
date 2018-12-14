@@ -6,7 +6,6 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import About from './components/About';
 import Reservations from './components/Reservations';
-import Blog from './components/Blog';
 import Error from './components/Error';
 import Footer from './components/Footer';
 
@@ -20,10 +19,9 @@ class App extends Component {
         <div>
           <Navigation />
           <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/about" component={About} />
-            <Route path="/reservations" component={Reservations} />
-            <Route path="/blog" component={Blog} />
+            <Route path={process.env.PUBLIC_URL + '/'} component={Home} exact />
+            <Route path={process.env.PUBLIC_URL + '/about'} component={About} />
+            <Route path={process.env.PUBLIC_URL + '/reservations'} component={Reservations} />
             <Route component={Error} />
           </Switch>
           <Footer />

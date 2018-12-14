@@ -12,9 +12,11 @@ import '../scss/Carousel.scss';
 class Carousel extends Component {
     constructor() {
         super();
+        // Properties = all image links
+        // Property = random image link from array
         this.state = {
             properties: data.properties,
-            property: data.properties[2]
+            property: data.properties[Math.floor(Math.random() * 5)]
         }
     }
 

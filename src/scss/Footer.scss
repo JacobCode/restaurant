@@ -27,13 +27,13 @@
                 transition: all 0.4s ease-in-out;
                 padding: 0.5rem;
                 &:hover {
-                    color: $red;
+                    color: $inactiveLink;
                 }
                 i {
                     font-size: 1.5rem;
                 }
                 &:last-of-type {
-                    margin: 0;
+                    margin: 0 !important;
                 }
             }
         }
@@ -44,6 +44,60 @@
             text-align: center;
             opacity: 0.5;
             font-family: $default;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer {
+        .top {
+            h4 {
+
+            }
+            .icons {
+                a {
+
+                }
+            }
+        }
+        .bottom {
+            p {
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        .top {
+            h4 {}
+
+            .icons {
+                a {}
+            }
+        }
+
+        .bottom {
+            p {}
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        .top {
+            h4 {}
+
+            .icons {
+                a {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        .bottom {
+            p {}
         }
     }
 }

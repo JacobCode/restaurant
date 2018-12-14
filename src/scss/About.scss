@@ -1,33 +1,83 @@
 @import './variables';
 
 #about {
-    background: #FCF8F4;
-    .main-image {
-        height: 60vh;
-        background-image: url('https://getbento.imgix.net/aNPt31LnSHGBSmVOVEdO_Image 1.jpg?fit=max&w=1800&auto=format,compress');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: -250px;
+    background: $darkGrey;
+    .main-content {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        // flex-direction: row-reverse;
+        .main-text {
+            width: 50%;
+            background: #FCF8F4;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            .text {
+                max-width: 400px;
+                margin: 0 auto;
+                h1 {
+                    margin-bottom: 1rem;
+                    font-family: $display;
+                    font-weight: 300;
+                    font-size: 2.3rem;
+                    text-transform: capitalize;
+                }
+                p {
+                    line-height: 1.5;
+                    font-family: $default;
+                    margin-bottom: 2rem;
+                    color: #969696;
+                    font-size: 1.1rem;
+                }
+                a {
+                    text-decoration: none;
+                    color: $darkGrey;
+                    font-size: 1.1rem;
+                    padding: 0.5rem 1rem;
+                    border-top-left-radius: 1.5rem;
+                    border-bottom-right-radius: 1.5rem;
+                    font-family: $default;
+                    letter-spacing: 1px;
+                    transition: all 0.4s ease-in-out;
+                    border: 1px solid $darkGrey;
+                    font-weight: 300;
+                    &:hover {
+                        background: $darkGrey;
+                        color: $lightGrey;
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+        .main-image {
+            width: 50%;
+            height: 100%;
+            background-image: url('https://images.pexels.com/photos/708777/pexels-photo-708777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=675&w=950');
+            background-image: url('https://images.pexels.com/photos/115007/grapes-frozen-fruit-summer-organic-115007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     }
     .summary {
         padding: 4rem 1rem;
         text-align: center;
-        background: $darkGrey;
+        background: $lightGrey;
         .content {
             max-width: 850px;
             margin: 0 auto;
             h1 {
-                font-family: $display;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                font-family: $default;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
                 margin-bottom: 1rem;
                 padding-bottom: 1rem;
-                color: $lightGrey;
-                font-weight: 400;
+                color: $purple;
+                font-weight: 300;
+                letter-spacing: 1px;
             }
             p {
                 font-family: $default;
-                color: #969696;
+                color: $darkGrey;
                 margin-bottom: 1rem;
                 line-height: 1.6;
                 font-weight: 300;
@@ -47,8 +97,9 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            &:first-of-type {
-                margin-bottom: 8rem;
+            margin-bottom: 8rem;
+            &:last-of-type {
+                margin-bottom: 0;
             }
             &.row-reverse {
                 flex-direction: row-reverse;
@@ -74,7 +125,7 @@
                     h2 {
                         margin-bottom: 1rem;
                         font-family: $display;
-                        color: $red;
+                        color: $purple;
                     }
                     p {
                         font-family: $default;
@@ -95,6 +146,143 @@
                 }
                 &.image2 {
                     background-image: url('https://getbento.imgix.net/7nFbBYhjROGNnvMeHmPZ_Image 5.jpg?fit=max&w=1800&auto=format,compress');
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #about {
+        .main-content {
+            height: 60vh;
+            .main-text {
+                
+            }
+        }
+        .summary {
+            .content {
+                h1 {
+
+                }
+                p {
+
+                }
+            }
+        }
+        .more-info {
+            .row {
+                &:first-of-type {
+
+                }
+                &.row-reverse {
+                    
+                }
+                .box {
+                    .text {
+                        h2 {
+
+                        }
+
+                        p {
+ 
+                        }
+                    }
+                }
+
+                .image {
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        .main-content {
+            flex-direction: column;
+            height: 80vh;
+            .main-text {
+                width: 100%;
+                
+            }
+            .main-image {
+                width: 100%;
+            }
+        }
+
+        .summary {
+            .content {
+                h1 {}
+
+                p {}
+            }
+        }
+
+        .more-info {
+            .row {
+                &:first-of-type {}
+
+                &.row-reverse {}
+
+                .box {
+                    .text {
+                        h2 {}
+
+                        p {}
+                    }
+                }
+
+                .image {}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about {
+        .main-content {
+            flex-direction: column;
+            height: 80vh;
+            .main-text {
+                width: 100%;
+                padding: 0 1rem;
+                .text {
+                    text-align: center;
+                    h1 {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .main-image {
+                width: 100%;
+            }
+        }
+        .summary {
+            .content {
+                h1 {}
+
+                p {}
+            }
+        }
+
+        .more-info {
+            .row {
+                &:first-of-type {}
+
+                &.row-reverse {}
+
+                .box {
+                    .text {
+                        h2 {}
+
+                        p {}
+                    }
+                }
+
+                .image {
+
                 }
             }
         }
