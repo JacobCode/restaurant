@@ -15,7 +15,8 @@
         }
         h1 {
             color: $lightGrey;
-            font-family: $default;
+            opacity: 0.2;
+            font-family: $display;
             font-weight: 300;
             text-align: center;
             font-size: 2.3rem;
@@ -79,12 +80,15 @@
         justify-content: center;
         a {
             text-decoration: none;
-            border: 2px solid #3f3f3f;
+            border: 1px solid #3f3f3f;
             color: #3f3f3f;
             padding: 0.5rem 1rem;
             transition: all 0.4s ease-in-out;
             letter-spacing: 1px;
             border-radius: 2rem;
+            font-weight: 300;
+            font-family: $default;
+            letter-spacing: 1px;
             &:hover {
                 background: #3f3f3f;
                 color: $darkGrey;

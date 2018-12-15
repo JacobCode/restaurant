@@ -142,20 +142,23 @@
             button {
                 background: $purple;
                 width: 200px;
-                font-size: 1.2rem;
-                font-family: $display;
+                font-size: 1rem;
+                font-family: $default;
                 border: none;
                 padding: 0.5rem;
                 cursor: pointer;
                 transition: all 0.4s ease-in-out;
                 color: $lightGrey;
+                border-top-right-radius: 1.5rem;
+                border-bottom-left-radius: 1.5rem;
                 &:focus {
                     outline-color: $purple;
                 }
                 &:hover {
-                    -webkit-box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.5);
-                    -moz-box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.5);
-                    box-shadow: 0px 0px 15px 3px rgba(151, 151, 151, 0.5);
+                    border-top-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 1.5rem;
+                    border-bottom-right-radius: 1.5rem;
                 }
             }
         }

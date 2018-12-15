@@ -32,6 +32,30 @@ class Carousel extends Component {
             property: data.properties[newIndex]
         })
     }
+    autoSlide = () => {
+        setInterval(() => {
+            console.log(this);
+        }, 5000);
+    }
+
+    componentDidMount() {
+        setInterval(() => {
+            // Reset index value
+            var resetIndex = 0;
+            // Get current property index value
+            var currentIndex = this.state.properties.indexOf(this.state.property);
+            var propertiesLength = this.state.properties.length - 1;
+            if (currentIndex < propertiesLength) {
+                this.setState({
+                    property: data.properties[currentIndex + 1]
+                })
+            } else if (currentIndex === propertiesLength) {
+                this.setState({
+                    property: data.properties[resetIndex]
+                })
+            }
+        }, 6000);
+    }
 
     render() {
         const {properties, property} = this.state;

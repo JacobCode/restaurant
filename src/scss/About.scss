@@ -7,9 +7,9 @@
         display: flex;
         align-items: center;
         // flex-direction: row-reverse;
+        background: $lightGrey;
         .main-text {
             width: 50%;
-            background: #FCF8F4;
             display: flex;
             align-items: center;
             height: 100%;
@@ -57,31 +57,32 @@
         .main-image {
             width: 50%;
             height: 100%;
-            background-image: url('https://images.pexels.com/photos/708777/pexels-photo-708777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=675&w=950');
-            background-image: url('https://images.pexels.com/photos/115007/grapes-frozen-fruit-summer-organic-115007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-image: url('https://www.lgssales.com/wp-content/uploads/2017/07/p-l-grapes_bunch.png');
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
         }
     }
     .summary {
         padding: 4rem 1rem;
         text-align: center;
-        background: $lightGrey;
+        background: $darkGrey;
         .content {
             max-width: 850px;
             margin: 0 auto;
             h1 {
-                font-family: $default;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                font-family: $display;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
                 margin-bottom: 1rem;
                 padding-bottom: 1rem;
-                color: $purple;
+                color: $lightGrey;
                 font-weight: 300;
                 letter-spacing: 1px;
             }
             p {
                 font-family: $default;
-                color: $darkGrey;
+                color: $lightGrey;
                 margin-bottom: 1rem;
                 line-height: 1.6;
                 font-weight: 300;
@@ -163,43 +164,6 @@
     #about {
         .main-content {
             height: 60vh;
-            .main-text {
-                
-            }
-        }
-        .summary {
-            .content {
-                h1 {
-
-                }
-                p {
-
-                }
-            }
-        }
-        .more-info {
-            .row {
-                &:first-of-type {
-
-                }
-                &.row-reverse {
-                    
-                }
-                .box {
-                    .text {
-                        h2 {
-
-                        }
-
-                        p {
- 
-                        }
-                    }
-                }
-
-                .image {
-                }
-            }
         }
     }
 }
@@ -211,36 +175,9 @@
             height: 80vh;
             .main-text {
                 width: 100%;
-                
             }
             .main-image {
                 width: 100%;
-            }
-        }
-
-        .summary {
-            .content {
-                h1 {}
-
-                p {}
-            }
-        }
-
-        .more-info {
-            .row {
-                &:first-of-type {}
-
-                &.row-reverse {}
-
-                .box {
-                    .text {
-                        h2 {}
-
-                        p {}
-                    }
-                }
-
-                .image {}
             }
         }
     }
@@ -251,6 +188,7 @@
         .main-content {
             flex-direction: column;
             height: 80vh;
+            padding-bottom: 2rem;
             .main-text {
                 width: 100%;
                 padding: 0 1rem;
@@ -261,26 +199,14 @@
                     }
                 }
             }
-
             .main-image {
                 width: 100%;
             }
         }
-        .summary {
-            .content {
-                h1 {}
-
-                p {}
-            }
-        }
-
         .more-info {
             .row {
-                &:first-of-type {}
-
                 &.row-reverse {
                     flex-direction: row-reverse;
-
                     .box {
                         .text {
                             left: -40%;
@@ -290,14 +216,9 @@
                 .box {
                     width: 60%;
                     .text {
-                        width: 400px !important;
                         left: 20%;
-                        h2 {}
-
-                        p {}
                     }
                 }
-
                 .image {
                     width: 40%;
                 }
