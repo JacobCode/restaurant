@@ -1,45 +1,36 @@
 import React, { Component } from 'react';
 
-// Carousel data
-import data from '../carouselData';
-
-// Components
-import Image from './Image';
-
 // SCSS
 import '../scss/Carousel.scss';
+
+// Data
+import carouselData from '../carouselData';
 
 class Carousel extends Component {
     constructor() {
         super();
-        // Properties = all image links
-        // Property = random image link from array
         this.state = {
-            properties: data.properties,
-            property: data.properties[Math.floor(Math.random() * 5)]
+            properties: carouselData.properties,
+            property: carouselData.properties[Math.floor(Math.random() * 5)]
         }
     }
-
+    // Next button goes forward by 1
     nextProperty = () => {
         const newIndex = this.state.properties.indexOf(this.state.property)+1
         this.setState({
-            property: data.properties[newIndex]
+            property: carouselData.properties[newIndex]
         })
     }
+    // Previous button goes back by 1
     prevProperty = () => {
         const newIndex = this.state.properties.indexOf(this.state.property)-1
         this.setState({
-            property: data.properties[newIndex]
+            property: carouselData.properties[newIndex]
         })
-    }
-    autoSlide = () => {
-        setInterval(() => {
-            console.log(this);
-        }, 5000);
     }
 
     componentDidMount() {
-        setInterval(() => {
+        this.auto = setInterval(() => {
             // Reset index value
             var resetIndex = 0;
             // Get current property index value
@@ -47,14 +38,17 @@ class Carousel extends Component {
             var propertiesLength = this.state.properties.length - 1;
             if (currentIndex < propertiesLength) {
                 this.setState({
-                    property: data.properties[currentIndex + 1]
+                    property: carouselData.properties[currentIndex + 1]
                 })
             } else if (currentIndex === propertiesLength) {
                 this.setState({
-                    property: data.properties[resetIndex]
+                    property: carouselData.properties[resetIndex]
                 })
             }
         }, 6000);
+    }
+    componentWillUnmount() {
+        clearInterval(this.auto);
     }
 
     render() {
@@ -67,16 +61,19 @@ class Carousel extends Component {
                     <div></div>
                 </div>
                 <div className="images-container">
-                    <Image property={property} />
+                    {/* Current image */}
+                    <div className="current-image" style={{backgroundImage: 'url(' + this.state.property + ')'}}></div>
                 </div>
                 <div className="controller">
+                    {/* Previous button */}
                     <button onClick={() => this.prevProperty()} 
                     disabled={properties.indexOf(property) === 0} 
                     className="left">
                         Prev
                     </button>
+                    {/* Next button */}
                     <button onClick={() => this.nextProperty()} 
-                    disabled={properties.indexOf(property) === data.properties.length-1} 
+                    disabled={properties.indexOf(property) === carouselData.properties.length-1} 
                     className="right">
                         Next
                     </button>

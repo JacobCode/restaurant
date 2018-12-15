@@ -40,19 +40,13 @@ class Reservations extends Component {
         var userName = e.target.elements[3].value;
         var userEmail = e.target.elements[4].value;
         var userPhone = e.target.elements[5].value;
-        // console.log(chosenDate);
-        // console.log(chosenTime);
-        // console.log(chosenParty);
-        // console.log(userName);
-        // console.log(userEmail);
-        // console.log(userPhone);
         this.setState({
-            chosenDate: chosenDate,
-            chosenTime: chosenTime,
-            chosenParty: chosenParty,
-            userName: userName,
-            userEmail: userEmail,
-            userPhone: userPhone
+            chosenDate,
+            chosenTime,
+            chosenParty,
+            userName,
+            userEmail,
+            userPhone
         })
     }
 

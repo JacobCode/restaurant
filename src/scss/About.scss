@@ -4,6 +4,7 @@
     background: $darkGrey;
     .main-content {
         height: 80vh;
+        max-height: 900px;
         display: flex;
         align-items: center;
         // flex-direction: row-reverse;
@@ -61,13 +62,17 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 100%;
+            background-size: 600px;
         }
     }
     .summary {
         padding: 4rem 1rem;
         text-align: center;
         background: $darkGrey;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .content {
             max-width: 850px;
             margin: 0 auto;
@@ -98,13 +103,13 @@
         .row {
             height: 400px;
             display: flex;
-            max-width: 900px;
+            max-width: 1100px;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
             margin-bottom: 8rem;
             &:last-of-type {
-                margin-bottom: 0;
+                margin-bottom: 0 !important;
             }
             &.row-reverse {
                 flex-direction: row-reverse;
@@ -117,6 +122,7 @@
             .box {
                 width: 50%;
                 display: flex;
+                max-width: 400px;
                 .text {
                     width: 100%;
                     background: #ffffffda;
@@ -188,23 +194,22 @@
         .main-content {
             flex-direction: column;
             height: 80vh;
-            padding-bottom: 2rem;
             .main-text {
                 width: 100%;
                 padding: 0 1rem;
                 .text {
                     text-align: center;
-                    h1 {
-                        font-size: 2rem;
-                    }
                 }
             }
             .main-image {
                 width: 100%;
+                background-size: 300px;
             }
         }
         .more-info {
             .row {
+                max-height: 350px;
+                margin-bottom: 5rem;
                 &.row-reverse {
                     flex-direction: row-reverse;
                     .box {
@@ -220,6 +225,7 @@
                     }
                 }
                 .image {
+                    height: 90%;
                     width: 40%;
                 }
             }
