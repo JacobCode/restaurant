@@ -165,18 +165,12 @@
     }
 }
 
-.booked {
-    min-height: 80vh;
-    background: blue;
-}
-
 @media screen and (max-width: 992px) {
     #reservations {
         h1 {
             padding: 0 2rem;
         }
         form {
-            background: rgb(207, 129, 57);
             padding: 0 2rem;
             .info {
                 div {

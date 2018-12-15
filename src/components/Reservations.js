@@ -11,12 +11,13 @@ class Reservations extends Component {
         super();
         this.state = {
             currentDate: '',
-            chosenDate: '',
-            chosenTime: '',
-            chosenParty: '',
-            userName: '',
-            userEmail: '',
-            userPhone: ''
+            chosenDate: '2018-12-15',
+            chosenTime: '4:30 PM',
+            chosenParty: '1 - 4',
+            userName: 'Jeremy Scott',
+            userEmail: 'jeremyhscott@gmail.com',
+            userPhone: '123-456-7890',
+            confirmed: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -46,7 +47,8 @@ class Reservations extends Component {
             chosenParty,
             userName,
             userEmail,
-            userPhone
+            userPhone,
+            confirmed: true
         })
     }
 
@@ -54,24 +56,32 @@ class Reservations extends Component {
         this.getDefaultDate();
     }
     render() {
-        if (1 < 2) {
+        const {
+            chosenDate,
+            chosenTime,
+            chosenParty,
+            userName,
+            userPhone,
+            userEmail
+        } = this.state
+        if (!this.state.confirmed) {
             return (
                 <div id="reservations" className="main-container">
                     <h1>Reservations</h1>
                     <form onSubmit={this.handleSubmit}>
                         <div className="info table">
                             <div>
-                                <input type="date" id="date" required></input>
+                                <input type="date" id="date" defaultValue={this.state.currentDate} required></input>
                             </div>
                             <div>
                                 <input type="text" placeholder="Time" required></input>
                             </div>
                             <div>
                                 <select name="party" defaultValue="sm-party">
-                                    <option value="sm-party">1 - 4</option>
-                                    <option value="md-party">4 - 6</option>
-                                    <option value="lg-party">6 - 8</option>
-                                    <option value="xl-party">8 +</option>
+                                    <option value="1 - 4">1 - 4</option>
+                                    <option value="4 - 6">4 - 6</option>
+                                    <option value="6 - 8">6 - 8</option>
+                                    <option value="8 +">8 +</option>
                                 </select>
                             </div>
                         </div>
@@ -95,7 +105,7 @@ class Reservations extends Component {
             )
         } else {
             return (
-                <Booked />
+                <Booked chosenDate={chosenDate} chosenTime={chosenTime} chosenParty={chosenParty} userName={userName} userPhone={userPhone} userEmail={userEmail} />
             )
         }
     }

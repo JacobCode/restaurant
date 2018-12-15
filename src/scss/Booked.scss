@@ -1,0 +1,79 @@
+@import './variables';
+
+.booked {
+    min-height: 80vh;
+    padding: 4rem 1rem;
+    background: $lightGrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+        width: 400px;
+        padding: 2rem;
+        background: white;
+        -webkit-box-shadow: 0px 0px 33px 3px rgba(224, 224, 224, 0.5);
+        -moz-box-shadow: 0px 0px 33px 3px rgba(224, 224, 224, 0.5);
+        box-shadow: 0px 0px 33px 3px rgba(224, 224, 224, 0.5);
+        .bar {
+            height: 1px; 
+            width: 100%;
+            background: rgba(0, 0, 0, 0.096);
+            margin: 0;
+            &:first-of-type {
+                margin-bottom: 1rem;
+            }
+            &:last-of-type {
+                margin-top: 1rem;
+            }
+        }
+        h1 {
+            margin-bottom: 1rem;
+            color: $darkGrey;
+            font-family: $display;
+            font-weight: 300;
+        }
+        div {
+            margin-bottom: 1rem;
+            span {
+                color: $purple;
+                font-weight: 500;
+                font-size: 1.1rem;
+            }
+        }
+        .table-info {
+            div {
+                font-family: $default;
+                font-weight: 300;
+                &:last-of-type {
+                    margin: 0;
+                }
+                h4 {
+                    color: $inactiveLink;
+                    font-weight: 400;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+        .user-info {
+            margin-bottom: 0;
+            div {
+                font-family: $default;
+                font-weight: 300;
+                &:last-of-type {
+                    margin: 0;
+                }
+                h4 {
+                    color: $inactiveLink;
+                    font-weight: 400;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .booked {
+        padding: 1rem;
+    }
+}
