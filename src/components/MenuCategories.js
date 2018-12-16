@@ -11,19 +11,19 @@ const MenuCategories = ({categories}) => {
     var categoryNames = ['Lunch', 'Dinner', 'Beverages', 'Dessert', 'Wine'];
 
     const lunchCat = lunch.map((item, i) => {
-        return (<div className="item" key={i}><p>{item.title}</p><span>{item.desc}</span></div>)
+        return (<div className="item" key={i}><p>{item.title}<span>{item.price}</span></p><span>{item.desc}</span></div>)
     });
     const dinnerCat = dinner.map((item, i) => {
-        return (<div className="item" key={i}><p>{item.title}</p><span>{item.desc}</span></div>)
+        return (<div className="item" key={i}><p>{item.title}<span>{item.price}</span></p><span>{item.desc}</span></div>)
     });
     const beveragesCat = beverages.map((item, i) => {
-        return (<div className="item" key={i}><p>{item.title}</p><span>{item.desc}</span></div>)
+        return (<div className="item" key={i}><p>{item.title}<span>{item.price}</span></p><span>{item.desc}</span></div>)
     });
     const dessertCat = dessert.map((item, i) => {
-        return (<div className="item" key={i}><p>{item.title}</p><span>{item.desc}</span></div>)
+        return (<div className="item" key={i}><p>{item.title}<span>{item.price}</span></p><span>{item.desc}</span></div>)
     });
     const wineCat = wine.map((item, i) => {
-        return (<div className="item" key={i}><p>{item.title}</p><span>{item.desc}</span></div>)
+        return (<div className="item" key={i}><p>{item.title}<span>{item.price}</span></p><span>{item.desc}</span></div>)
     });
 
     // Category items in each category

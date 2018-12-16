@@ -23,7 +23,6 @@
         .info {
             display: grid;
             grid-template-columns: 1fr;
-            grid-gap: 2fr;
             div {
                 margin-bottom: 2rem;
                 min-height: 40px;
@@ -94,21 +93,21 @@
 
                     &::-webkit-datetime-edit-month-field {
                         &:focus {
-                            background: $purple;
+                            background: $green;
                             color: $lightGrey;
                         }
                     }
 
                     &::-webkit-datetime-edit-day-field {
                         &:focus {
-                            background: $purple;
+                            background: $green;
                             color: $lightGrey;
                         }
                     }
 
                     &::-webkit-datetime-edit-year-field {
                         &:focus {
-                            background: $purple;
+                            background: $green;
                             color: $lightGrey;
                         }
                     }
@@ -140,19 +139,18 @@
             justify-content: center;
             align-items: center;
             button {
-                background: $purple;
-                width: 200px;
-                font-size: 1rem;
+                background: $green;
+                font-size: 1.1rem;
                 font-family: $default;
                 border: none;
-                padding: 0.5rem;
+                padding: 0.5rem 1.5rem;
                 cursor: pointer;
                 transition: all 0.4s ease-in-out;
                 color: $lightGrey;
                 border-top-right-radius: 1.5rem;
                 border-bottom-left-radius: 1.5rem;
                 &:focus {
-                    outline-color: $purple;
+                    outline: none;
                 }
                 &:hover {
                     border-top-right-radius: 0;

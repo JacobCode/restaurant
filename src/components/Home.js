@@ -8,16 +8,31 @@ import Reviews from './Reviews';
 class Home extends Component {
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            isLoading: true
+        }
+    }
+    componentDidMount() {
+        this.setState({
+            isLoading: false
+        })
     }
     render() {
-        return (
-            <div id="home" className="main-container">
-                <Carousel />
-                <Menu />
-                <Reviews />
-            </div>
-        )
+        if (!this.state.isLoading) {
+            return (
+                <div id="home" className="main-container">
+                    <Carousel />
+                    <Menu />
+                    <Reviews />
+                </div>
+            )
+        } else {
+            return (
+                <div className="loading">
+                    <div className="loading-image"></div>
+                </div>
+            )
+        }
     }
 }
 

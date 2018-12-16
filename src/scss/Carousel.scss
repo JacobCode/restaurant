@@ -49,14 +49,16 @@
         margin: 0 auto;
         button {
             width: 40%;
-            background: $purple;
+            background: $green;
             border: none;
-            padding: 0.5rem 0;
-            color: white;
+            color: $lightGrey;
             cursor: pointer;
             font-family: $default;
             font-size: 1rem;
             letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &:focus {
                 outline: none;
             }
@@ -71,6 +73,14 @@
             &:last-of-type {
                 border-top-left-radius: 1.5rem;
                 border-bottom-right-radius: 1.5rem;
+                img {
+                    &:last-of-type {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            img {
+                height: 2.3rem;
             }
         }
     }
@@ -129,7 +139,9 @@
 
         .images-container {
             margin-bottom: 3rem;
-            .current-image {}
+            .current-image {
+                height: 300px;
+            }
         }
 
         .controller {

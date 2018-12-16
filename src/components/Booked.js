@@ -11,14 +11,13 @@ const Booked = (props) => {
     var formattedDate = month + '/' + day + '/' + year;
     return (
         <div className="booked">
-            {console.log(props)}
             <div className="container">
                 <div className="bar"></div>
                 <h1>Your Reservation</h1>
                 <div className="table-info">
                     <div>
                         <h4>Time</h4>
-                        <span>{formattedDate} &bull; {props.chosenTime}</span>
+                        <span>{formattedDate} @ {props.chosenTime}</span>
                     </div>
                     <div>
                         <h4>Party Size</h4>

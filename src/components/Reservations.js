@@ -17,7 +17,8 @@ class Reservations extends Component {
             userName: 'Jeremy Scott',
             userEmail: 'jeremyhscott@gmail.com',
             userPhone: '123-456-7890',
-            confirmed: false
+            confirmed: false,
+            isLoading: true
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -51,9 +52,13 @@ class Reservations extends Component {
             confirmed: true
         })
     }
-
     componentWillMount() {
         this.getDefaultDate();
+    }
+    componentDidMount() {
+        this.setState({
+            isLoading: false
+        })
     }
     render() {
         const {
@@ -64,10 +69,10 @@ class Reservations extends Component {
             userPhone,
             userEmail
         } = this.state
-        if (!this.state.confirmed) {
+        if (!this.state.confirmed && !this.state.isLoading) {
             return (
                 <div id="reservations" className="main-container">
-                    <h1>Reservations</h1>
+                    <h1>Book A Table</h1>
                     <form onSubmit={this.handleSubmit}>
                         <div className="info table">
                             <div>
@@ -98,16 +103,22 @@ class Reservations extends Component {
                             </div>
                         </div>
                         <div className="submit">
-                            <button type="submit">Request A Table</button>
+                            <button type="submit">Request</button>
                         </div>
                     </form>
                 </div>
             )
-        } else {
+        } else if (this.state.isLoading) {
             return (
-                <Booked chosenDate={chosenDate} chosenTime={chosenTime} chosenParty={chosenParty} userName={userName} userPhone={userPhone} userEmail={userEmail} />
+                <div className="loading">
+                    <div className="loading-image"></div>
+                </div>
             )
-        }
+            } else if (!this.state.isLoading && this.state.confirmed) {
+                return (
+                    <Booked chosenDate={chosenDate} chosenTime={chosenTime} chosenParty={chosenParty} userName={userName} userPhone={userPhone} userEmail={userEmail} />
+                )
+            }
     }
 }
 

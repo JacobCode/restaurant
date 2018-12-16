@@ -6,6 +6,9 @@ import '../scss/Carousel.scss';
 // Data
 import carouselData from '../carouselData';
 
+// Images
+import arrowIcon from '../images/arrow-icon.svg';
+
 class Carousel extends Component {
     constructor() {
         super();
@@ -69,13 +72,13 @@ class Carousel extends Component {
                     <button onClick={() => this.prevProperty()} 
                     disabled={properties.indexOf(property) === 0} 
                     className="left">
-                        Prev
+                        <img src={arrowIcon} alt="arrow-left"></img>
                     </button>
                     {/* Next button */}
                     <button onClick={() => this.nextProperty()} 
                     disabled={properties.indexOf(property) === carouselData.properties.length-1} 
                     className="right">
-                        Next
+                        <img src={arrowIcon} alt="arrow-right"></img>
                     </button>
                 </div>
             </div>

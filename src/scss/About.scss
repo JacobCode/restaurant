@@ -7,8 +7,7 @@
         max-height: 900px;
         display: flex;
         align-items: center;
-        // flex-direction: row-reverse;
-        background: $lightGrey;
+        background: $green;
         .main-text {
             width: 50%;
             display: flex;
@@ -23,17 +22,18 @@
                     font-weight: 300;
                     font-size: 2.3rem;
                     text-transform: capitalize;
+                    color: $lightGrey;
                 }
                 p {
                     line-height: 1.5;
                     font-family: $default;
                     margin-bottom: 2rem;
-                    color: #969696;
+                    color: $lightGreen;
                     font-size: 1.1rem;
                 }
                 a {
                     text-decoration: none;
-                    color: $darkGrey;
+                    color: $lightGrey;
                     font-size: 1.1rem;
                     padding: 0.5rem 1rem;
                     border-top-right-radius: 1.5rem;
@@ -41,11 +41,10 @@
                     font-family: $default;
                     letter-spacing: 1px;
                     transition: all 0.4s ease-in-out;
-                    border: 1px solid $darkGrey;
-                    font-weight: 300;
+                    border: 1px solid $lightGrey;
                     &:hover {
-                        background: $darkGrey;
-                        color: $lightGrey;
+                        background: $lightGrey;
+                        color: $green;
                         border-color: transparent;
                         border-top-right-radius: 0;
                         border-bottom-left-radius: 0;
@@ -62,13 +61,14 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 600px;
+            background-size: 500px;
         }
     }
     .summary {
         padding: 4rem 1rem;
         text-align: center;
         background: $darkGrey;
+        background: $lightGrey;
         min-height: 600px;
         display: flex;
         align-items: center;
@@ -78,16 +78,18 @@
             margin: 0 auto;
             h1 {
                 font-family: $display;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
                 margin-bottom: 1rem;
                 padding-bottom: 1rem;
                 color: $lightGrey;
+                color: $darkGrey;
                 font-weight: 300;
                 letter-spacing: 1px;
             }
             p {
                 font-family: $default;
                 color: $lightGrey;
+                color: #969696;
                 margin-bottom: 1rem;
                 line-height: 1.6;
                 font-weight: 300;
@@ -136,7 +138,7 @@
                     h2 {
                         margin-bottom: 1rem;
                         font-family: $display;
-                        color: $purple;
+                        color: $green;
                     }
                     p {
                         font-family: $default;
@@ -170,6 +172,13 @@
     #about {
         .main-content {
             height: 60vh;
+            .main-text {
+                padding: 2rem;
+            }
+            .main-image {
+                padding: 2rem;
+                background-size: 400px;
+            }
         }
     }
 }
@@ -183,7 +192,7 @@
                 width: 100%;
             }
             .main-image {
-                width: 100%;
+                display: none;
             }
         }
     }
@@ -192,18 +201,19 @@
 @media screen and (max-width: 480px) {
     #about {
         .main-content {
-            flex-direction: column;
-            height: 80vh;
+            height: 60vh;
             .main-text {
                 width: 100%;
                 padding: 0 1rem;
                 .text {
                     text-align: center;
+                    h1 {
+                        
+                    }
+                    p {
+                        
+                    }
                 }
-            }
-            .main-image {
-                width: 100%;
-                background-size: 300px;
             }
         }
         .more-info {
@@ -214,14 +224,14 @@
                     flex-direction: row-reverse;
                     .box {
                         .text {
-                            left: -40%;
+                            left: -35%;
                         }
                     }
                 }
                 .box {
                     width: 60%;
                     .text {
-                        left: 20%;
+                        left: 31%;
                     }
                 }
                 .image {
